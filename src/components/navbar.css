@@ -1,0 +1,64 @@
+.logo{
+    height:40px;
+    margin:0px;
+    padding:0px;
+    z-index: 11;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3px;
+    margin:22px;
+    overflow: hidden;
+}
+.header a{
+    text-decoration: none;
+}
+.navul{
+    display:flex;
+}
+.navul li{
+    padding:15px;
+}
+.navul li a{
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.hamburger{
+    display:none;
+}
+@media screen and (max-width : 1040px) {
+    .navul{
+        /* padding:10px; */
+        /* margin:10px; */
+        width:100vw;
+        height:100vh;
+        position:absolute;
+        top:-100%;
+        left:0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(4px);
+        
+        transition: 0.5s;
+    }
+    .navul.active{
+        
+        z-index: 5;
+        top:0;
+        height:100vh;
+             
+        position: fixed;  
+    }
+    .hamburger{
+        display: initial;
+        z-index: 6;
+            
+        position: fixed;  
+        top:25px; 
+        right:15px;
+    }
+}
